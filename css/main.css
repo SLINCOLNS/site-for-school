@@ -1,0 +1,515 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('https://i.imgur.com/aGgXpH6.png');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+
+
+/* Изменение внешнего вида полосы прокрутки в браузерах WebKit */
+::-webkit-scrollbar {
+width: 16px; /* Ширина полосы прокрутки */
+height: 30px; /* Высота ползунка */
+}
+
+::-webkit-scrollbar-thumb {
+background-color: rgba(60, 62, 70, 0.5); /* Цвет полосы прокрутки с прозрачностью */
+border-radius: 6px; /* Скругление углов ползунка */
+border: 2px solid #ffffff; /* Рамка ползунка */
+}
+
+::-webkit-scrollbar-thumb:hover {
+background-color: rgba(60, 62, 70, 1); /* Ползунок становится непрозрачным при наведении */
+}
+
+
+
+.link {
+position: fixed;
+top: 12px;
+left: 60px; 
+z-index: 999;
+text-decoration: none;
+color: white;
+}
+
+@media screen and (max-width: 768px) {
+.link {
+    display: none;
+}
+}
+
+@media screen and (max-width: 768px) {
+.logo {
+    display: none;
+}
+}
+
+@media screen and (max-width: 768px) {
+.arrow {
+    display: none;
+}
+}
+
+@media screen and (max-width: 768px) {
+.dot {
+    display: none;
+}
+}
+
+
+
+.navbar {
+position: fixed;
+top: 18px;
+right: 0;
+font-size: 18px;
+display: flex;
+align-items: center;
+}
+
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.navbar a:hover {
+    color: #3963ff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: rgba(0, 0, 0, 0.5);
+min-width: 120px;
+border-radius: 10px; 
+padding: 10px 20px; 
+z-index: 0;
+left: 50%;
+transform: translateX(-50%); 
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.link:hover {
+color: white; 
+}
+
+a {
+text-decoration: none;
+color: inherit; 
+}
+
+.button {
+    padding: 13px 32px;
+    width: fit-content;
+    background: #3963ff;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+    transition: .3s;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 700px;
+    left: 40px;
+    height: 25px;   
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.icons {
+    position: absolute;
+    top: 705px;
+    left: 200px; /* Расстояние между кнопкой и иконкой */
+    cursor: pointer;
+    overflow: visible; /* Позволяет выпадающим иконкам быть видимыми */
+}
+
+.icons a img {
+    max-width: 40px;
+    transition: .3s;
+}
+
+.icons::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: -20px;
+    width: 80px;
+    height: 50px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.icons::after img {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    transition: .3s;
+    opacity: 0;
+}
+
+.icons:hover::after {
+    bottom: -70px;
+}
+
+.icons:hover::after img {
+    opacity: 1;
+}
+
+.icons::after img:nth-child(1) {
+    background-image: url('img/free-icon-facebook-4494475.png');
+}
+
+.icons::after img:nth-child(2) {
+    background-image: url('img/free-icon-instagram-2111463.png');
+}
+
+.icons::after img:nth-child(3) {
+    background-image: url('img/free-icon-telegram-2111646.png');
+}
+
+@keyframes jitter {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-2px, -2px);
+    }
+    50% {
+        transform: translate(2px, 2px);
+    }
+    75% {
+        transform: translate(-2px, 2px);
+    }
+    100% {
+        transform: translate(2px, -2px);
+    }
+}
+
+.icons:hover img {
+    animation: jitter 0.3s linear infinite;
+}
+
+
+.text {
+position: absolute;
+top: 599px;
+left: 40px;
+font-size: 10px;
+max-width: 400px; 
+z-index: 999;
+}
+
+.copyright {
+position: fixed;
+bottom: 10px;
+left: 50%; 
+transform: translateX(-50%); 
+font-size: 12px;
+color: rgba(255, 255, 255, 0.5); 
+}
+
+body {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+margin: 0;
+}
+
+.carousel-container {
+position: relative;
+width: 550px; 
+height: 350px;
+overflow: hidden;
+margin-bottom: 20px;
+border-radius: 15px; 
+}
+
+
+.carousel-slide {
+display: none;
+background: rgba(0, 0, 0, 0.5); 
+}
+
+.carousel-slide img {
+width: 100%;
+height: auto;
+}
+
+.carousel-dots {
+text-align: center;
+}
+
+.dot {
+height: 10px;
+width: 10px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+margin: 0 5px;
+cursor: pointer;
+}
+
+.active-dot {
+background-color: #333;
+}
+
+
+.logo {
+font-size: 18px;
+width: 25px;
+height: 25px;
+position: fixed;
+text-decoration: none;
+top: 12px; 
+left: 20px; 
+z-index: 999;
+}
+
+
+.user-select-none {
+user-select: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+}
+
+.carousel-arrows {
+position: absolute;
+top: 50%;
+width: 40%;
+display: flex;
+justify-content: space-between;
+transform: translateY(-50%);
+}
+
+.arrow {
+font-size: 45px;
+color: rgba(255, 255, 255, 0.7); 
+cursor: pointer;
+border-radius: 50%; 
+padding: 10px; 
+transition: 0.3s ease;
+}
+
+.arrow:hover {
+color: rgba(255, 255, 255, 1); 
+}
+
+
+.carousel-dots {
+text-align: center;
+margin-top: 20px;
+}
+
+
+.dot {
+height: 10px;
+width: 10px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+margin: 0 5px;
+cursor: pointer;
+}
+
+.active-dot {
+background-color: #5e5959;
+}
+
+.info {
+position: relative;
+bottom: 10px;
+left: 50%; 
+transform: translateX(-50%); 
+font-size: 12px;
+color: rgba(255, 255, 255, 0.5); 
+margin-bottom: 50px;
+width: 100em;
+
+}
+
+.school-info-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #ffffff; /* Белый фон */
+padding: 170px;
+border: 2px solid #353535; /* Цвет рамки */
+border-radius: 10px;
+box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+position: relative;
+}
+
+.school-info-container::before {
+content: "";
+position: absolute;
+top: -20px;
+left: 50%;
+transform: translateX(-50%);
+width: 40px;
+height: 40px;
+background-color: #353535; /* Цвет "капли" над блоком */
+clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.school-info-container .school-image {
+flex: 1;
+margin-right: 40px;
+}
+
+.school-info-container .school-image img {
+width: 100%;
+height: auto;
+border-radius: 20px; /* Скругление углов у изображения */
+border: 4px solid #353535; /* Рамка у изображения */
+box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.school-info-container .school-text {
+flex: 2;
+text-align: justify;
+}
+
+.school-info-container .school-text h2 {
+font-size: 36px;
+margin-bottom: 10px;
+color: #333333; /* Цвет заголовка */
+}
+
+.school-info-container .school-text p {
+font-size: 18px;
+line-height: 1.6;
+color: #555555; /* Цвет текста */
+}
+
+
+.bottom-panel {
+position: absolute;
+bottom: -700px; /* Отрицательное значение высоты панели, чтобы полностью спрятать ее под страницу */
+width: 100%;
+height:  700px; /* Высота вашей панели */
+background-color: white; /* Устанавливаем белый фон */
+z-index: -1; /* Устанавливаем низкий уровень z-index, чтобы панель была за другими элементами страницы */
+}
+
+
+
+.main {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+}
+
+.main:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.main-image {
+    width: 500px;
+    height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+.main {
+    display: none;
+}
+}
+
+
+.footer {
+    position: absolute;
+    bottom: -800;
+    width: 100%;
+    background: linear-gradient(to right, #000000, #1f1313, #000000); /* Градиентный фон от красного к черному */
+    color: white;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999; /* Устанавливаем высокий уровень z-index, чтобы панель была над другими элементами страницы */
+}
+
+.social-icons a img {
+    max-width: 20px; /* Замените это значение на желаемый максимальный размер иконок */
+    margin-right: 30px; /* Установите желаемое расстояние между иконками */
+    transition: 0.3s ease; /* Добавляем плавную анимацию на всех элементах с классами .social-icons, a и .contact-info */
+}
+
+.social-icons a img:hover{
+    transform: scale(1.3); /* Увеличиваем размер при наведении */
+    transition: 0.3s ease; /* Добавляем плавную анимацию при наведении */
+}
+
+.contact-info {
+    font-size: 11px;
+     
+    transform: translateX(-50%); 
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5); 
+}
+
+  
+  
+
+
+
+.scroll-to-top {
+position: fixed;
+bottom: 20px;
+right: 20px;
+display: none;
+}
+
+.scroll-to-top button {
+background-color: #3963ff;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+}
+
+.scroll-to-top button:hover {
+background-color: #304bff;
+}

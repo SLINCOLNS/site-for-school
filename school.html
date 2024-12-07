@@ -1,0 +1,179 @@
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="logo">
+    <img href="https://www.school36.inf.ua/" class="logo" src="https://i.imgur.com/Ghn3EW3.png" alt="Логотип">
+</div>  
+    <h2><a href="https://www.school36.inf.ua/" class="link">Школа №36</a></h2>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide">
+                    <img src="https://i.imgur.com/IHi5hYT.jpeg" alt="Изображение 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://i.imgur.com/Ns5KOWW.jpeg" alt="Изображение 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://i.imgur.com/bc1haKM.jpeg" alt="Изображение 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://i.imgur.com/UtgXiP7.jpeg" alt="Изображение 4">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-arrows">
+            <div class="arrow left">&lt;</div>
+            <div class="arrow right">&gt;</div>
+        </div>
+        <div class="scroll-to-top">
+            <button>Наверх</button>
+          </div>
+        <div class="carousel-dots"></div>
+        <div class="carousel-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script>
+$(document).ready(function(){
+    $('.carousel').slick({
+        dots: true,
+        arrows: false, // Отключаем встроенные стрелки карусели
+        autoplay: true,
+        autoplaySpeed: 3000, // Переключение каждые 5 секунд
+    });
+
+    // Переключение слайдов при клике на стрелки
+    $('.left').click(function(){
+        $('.carousel').slick('slickPrev');
+    });
+    
+    $('.right').click(function(){
+        $('.carousel').slick('slickNext');
+    });
+
+    // Переключение слайдов при клике на точки
+    $('.dot').click(function(){
+        var index = $(this).index();
+        $('.carousel').slick('slickGoTo', index);
+    });
+
+    // Обновление активной точки при смене слайда
+    $('.carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $('.dot').removeClass('active-dot');
+        $('.dot').eq(nextSlide).addClass('active-dot');
+    });
+});
+
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+
+    const dots = document.querySelectorAll(".dot");
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+        });
+    });
+});
+
+document.querySelector('.scroll-to-top button').addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+  const footer = document.querySelector('.footer');
+  const content = document.querySelector('.content');
+
+  window.addEventListener('scroll', function() {
+    if (window.innerHeight + window.scrollY >= content.offsetHeight) {
+      footer.classList.add('active');
+    } else {
+      footer.classList.remove('active');
+    }
+  });
+});
+
+        </script>
+<div class="button" data-view="header">
+    <b>Telegram</b>
+</div>
+
+<div class="icons">
+    <a href="ссылка_на_telegram">
+        <img src="img/free-icon-telegram-2111646.png" alt="Telegram">
+    </a>
+</div>
+
+
+        <div class="text">
+            <h1>Школа I-III ступенів № 36 імені С.П.Корольова міста Києва</h1>
+            <div class="container">
+                <div class="navbar">
+                    <div class="dropdown">
+                        <a href="#">Про школу</a>
+                        <div class="dropdown-content">
+                            <a href="#">Педагоги</a>
+                            <a href="#">Розклад</a>
+                            <a href="#">Гуртки</a>
+                            <a href="#">Лицензии</a>
+                        </div>
+                    </div>
+                                            <a href="#">Головна</a>
+                                            <a href="#">Контакти</a>
+                </div>
+            </div>
+        </div>
+        <div class="main user-select-none">
+            <img src="https://i.imgur.com/tEkk1Fy.png" alt="Главная" class="main-image">
+        </div>        
+        <div class="copyright">
+            © Школа № 36. Київ-040, вул.М.Стельмаха, 9, тел. (044)2577630, mail: sch36kyiv@ukr.net
+            
+        </div>
+    </div> 
+    <div class="bottom-panel">
+        <div class="school-info-container">
+            <div class="school-image">
+                <img src="https://znayshov.com/File/Schools/?sfld=Photos&f=2140debf59ec4dcf8799ae78434e5b9d.image!jpeg.207631.jpg.Shkola_36.jpg" alt="Фотография школы">
+            </div>
+            <div class="school-text">
+                <h2>Школа №36 імені С.П.Корольова</h2>
+                <p>
+                    Ну кароче да такая фигня фиговая я вахуе в трихуе, ну ничего себе, вот это да я не знаю что тут написать по этому 
+                    пишу всё впоряд помогите пожалуйста, ахахаах. Ееесть
+                </p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="social-icons">
+          <a href="ссылка_на_viber"><img src="img/free-icon-viber-3670059.png" alt="Viber"></a>
+          <a href="ссылка_на_telegram"><img src="img/free-icon-telegram-2111646.png" alt="Telegram"></a>
+          <a href="ссылка_на_google"><img src="img/free-icon-facebook-4494475.png" alt="Facebook"></a>
+          <a href="ссылка_на_instagram"><img src="img/free-icon-instagram-2111463.png" alt="Instagram"></a>
+        </div>
+        <div class="contact-info">
+          <p>            © Школа № 36. Київ-040, вул.М.Стельмаха, 9, тел. (044)2577630, mail: sch36kyiv@ukr.net</p>
+        </div>
+      </footer>
+      
+    </section>
+</body>
+</html>
