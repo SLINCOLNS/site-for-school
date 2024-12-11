@@ -16,20 +16,20 @@ body {
 
 
 
-/* Изменение внешнего вида полосы прокрутки в браузерах WebKit */
+
 ::-webkit-scrollbar {
-width: 16px; /* Ширина полосы прокрутки */
-height: 30px; /* Высота ползунка */
+width: 16px; 
+height: 30px;
 }
 
 ::-webkit-scrollbar-thumb {
-background-color: rgba(60, 62, 70, 0.5); /* Цвет полосы прокрутки с прозрачностью */
-border-radius: 6px; /* Скругление углов ползунка */
-border: 2px solid #ffffff; /* Рамка ползунка */
+background-color: rgba(60, 62, 70, 0.5);
+border-radius: 6px; 
+border: 2px solid #ffffff; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-background-color: rgba(60, 62, 70, 1); /* Ползунок становится непрозрачным при наведении */
+background-color: rgba(60, 62, 70, 1); 
 }
 
 
@@ -154,9 +154,9 @@ color: inherit;
 .icons {
     position: absolute;
     top: 705px;
-    left: 200px; /* Расстояние между кнопкой и иконкой */
+    left: 200px; 
     cursor: pointer;
-    overflow: visible; /* Позволяет выпадающим иконкам быть видимыми */
+    overflow: visible; 
 }
 
 .icons a img {
@@ -370,9 +370,9 @@ width: 100em;
 display: flex;
 justify-content: space-between;
 align-items: center;
-background-color: #ffffff; /* Белый фон */
+background-color: #ffffff; 
 padding: 170px;
-border: 2px solid #353535; /* Цвет рамки */
+border: 2px solid #353535; 
 border-radius: 10px;
 box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 position: relative;
@@ -386,7 +386,7 @@ left: 50%;
 transform: translateX(-50%);
 width: 40px;
 height: 40px;
-background-color: #353535; /* Цвет "капли" над блоком */
+background-color: #353535;
 clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
@@ -398,9 +398,9 @@ margin-right: 40px;
 .school-info-container .school-image img {
 width: 100%;
 height: auto;
-border-radius: 20px; /* Скругление углов у изображения */
-border: 4px solid #353535; /* Рамка у изображения */
-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Тень */
+border-radius: 20px; 
+border: 4px solid #353535;
+box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 .school-info-container .school-text {
@@ -411,23 +411,23 @@ text-align: justify;
 .school-info-container .school-text h2 {
 font-size: 36px;
 margin-bottom: 10px;
-color: #333333; /* Цвет заголовка */
+color: #333333; 
 }
 
 .school-info-container .school-text p {
 font-size: 18px;
 line-height: 1.6;
-color: #555555; /* Цвет текста */
+color: #555555; 
 }
 
 
 .bottom-panel {
 position: absolute;
-bottom: -700px; /* Отрицательное значение высоты панели, чтобы полностью спрятать ее под страницу */
+bottom: -700px; 
 width: 100%;
-height:  700px; /* Высота вашей панели */
-background-color: white; /* Устанавливаем белый фон */
-z-index: -1; /* Устанавливаем низкий уровень z-index, чтобы панель была за другими элементами страницы */
+height:  700px; 
+background-color: white; 
+z-index: -1; 
 }
 
 
@@ -460,24 +460,24 @@ z-index: -1; /* Устанавливаем низкий уровень z-index, 
     position: absolute;
     bottom: -800;
     width: 100%;
-    background: linear-gradient(to right, #000000, #1f1313, #000000); /* Градиентный фон от красного к черному */
+    background: linear-gradient(to right, #000000, #1f1313, #000000); 
     color: white;
     padding: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    z-index: 999; /* Устанавливаем высокий уровень z-index, чтобы панель была над другими элементами страницы */
+    z-index: 999; 
 }
 
 .social-icons a img {
-    max-width: 20px; /* Замените это значение на желаемый максимальный размер иконок */
-    margin-right: 30px; /* Установите желаемое расстояние между иконками */
-    transition: 0.3s ease; /* Добавляем плавную анимацию на всех элементах с классами .social-icons, a и .contact-info */
+    max-width: 20px;
+    margin-right: 30px; 
+    transition: 0.3s ease; 
 }
 
 .social-icons a img:hover{
-    transform: scale(1.3); /* Увеличиваем размер при наведении */
-    transition: 0.3s ease; /* Добавляем плавную анимацию при наведении */
+    transform: scale(1.3);
+    transition: 0.3s ease; 
 }
 
 .contact-info {
